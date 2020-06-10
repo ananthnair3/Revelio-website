@@ -1,0 +1,80 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile [colspan]= "1" [rowspan] = "1"> 
+      <mat-card class="dashboard-card">
+       <mat-card-header>
+         <mat-card-title>
+           <h4 class="card-title">Daily Sales</h4>
+         </mat-card-title>
+         </mat-card-header>
+         <mat-card-content class="dashboard-card-content" style="position: relative; height:20vh; width:520px">
+          <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType">
+          </canvas>  
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]= "1" [rowspan] = "1"> 
+      <mat-card class="dashboard-card">
+       <mat-card-header>
+         <mat-card-title>
+           <h4 class="card-title">Inventory</h4>
+         </mat-card-title>
+         </mat-card-header>
+         <mat-card-content class="dashboard-card-content" style="position: relative; height:20vh; width:520px">
+          <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="'bar'">
+          </canvas>  
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]= "1" [rowspan] = "1"> 
+      <mat-card class="dashboard-card">
+       <mat-card-header>
+         <mat-card-title>
+           <h4 class="card-title">Quaterly Sales</h4>
+         </mat-card-title>
+         </mat-card-header>
+         <mat-card-content class="dashboard-card-content" style="position: relative; height:20vh; width:520px">
+          <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="'doughnut'">
+          </canvas>  
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]= "1" [rowspan] = "1"> 
+      <mat-card class="dashboard-card">
+       <mat-card-header>
+         <mat-card-title>
+           <h4 class="card-title">Random</h4>
+         </mat-card-title>
+         </mat-card-header>
+         <mat-card-content class="dashboard-card-content" style="position: relative; height:20vh; width:520px">
+          <canvas baseChart
+              [datasets]="chrtData"
+              [labels]="chrtLabel"
+              [options]="barChartOptions"
+              [legend]="chrtLegend"
+              [chartType]="chrtType">
+          </canvas>  
+          </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
